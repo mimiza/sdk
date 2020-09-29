@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Mimiza FaceBulk",
+        "codeName": "mimiza-facebulk",
+        "protected": true,
+        "activationCodeRequired": true,
+        "path": "/products/mimiza-facebulk",
+        "image": "/images/mimiza-facebulk.png",
+        "downloadUrl": "/downloads/mimiza-facebulk.zip",
+        "price": "119.95",
+        "salePrice": "49.95",
+        "currency": "USD",
+        "jvzoo": "0/321325/99"
+    }
+]
