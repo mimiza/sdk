@@ -6,7 +6,7 @@
     "author": "MIMIZA <dev@mimiza.com>",
     "license": "MIT",
     "scripts": {
-        "babel": "babel src -d dist",
+        "babel": "babel src -d dist --copy-files",
         "build": "webpack --mode production",
         "dev": "webpack-dev-server --open"
     },
@@ -15,8 +15,6 @@
         "bulma-extensions": "^3.0.0",
         "gatsby": "^2.0.38",
         "gun": "https://github.com/amark/gun",
-        "node-sass": "^4.10.0",
-        "preact": "^10.4.1",
         "qrcode-svg": "^1.1.0",
         "react-async-script-loader": "^0.3.0",
         "react-copy-to-clipboard": "^5.0.1",

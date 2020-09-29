@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "key": {
+                "pub": "Ql6tJsYLczHOqkowjTe1EsVGXiojyHLhY0wnxuhtaFw.zN-pwvwBeDp94vSspRl1W-rlD3AvTXcqLwqP8RYMIzY",
+                "epub": "n2QKBnhasKfxPNjXCWpO-4fH3T4iObHCs8348vcVMv0.Bi6iTfLJiUcZ54Oy-fmTn9PQbgjGkAmRK9oelUKz9ys"
+            },
+            "roles": ["system"]
+        }
+    ],
+    "permissions": {
+        "navigation": ["system", "customer"],
+        "/dashboard": ["system", "customer"],
+        "/dashboard/product-authentication": ["system"],
+        "/dashboard/campaign": ["system", "customer"],
+        "/dashboard/content": ["system", "customer"],
+        "/dashboard/social-account": ["system", "customer"],
+        "makeMoney": ["system", "customer"],
+        "/dashboard/make-money": ["system", "customer"],
+        "system": ["system"],
+        "/dashboard/user": ["system"],
+        "settings": ["system", "customer"],
+        "/dashboard/profile": ["system", "customer"],
+        "/dashboard/change-password": ["system", "customer"],
+        "/dashboard/authorize": ["system", "customer"],
+        "/dashboard/security": ["system", "customer"]
+    }
+}
