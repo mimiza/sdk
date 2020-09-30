@@ -1,20 +1,16 @@
-import React, { Component } from 'react'
-import config from '../../config'
-import Data from './Data'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
-import { notify, encodeQuery } from '../services/utils'
+import React, { Component } from "react"
+import config from "../../config"
+import Data from "./Data"
+import { CopyToClipboard } from "react-copy-to-clipboard"
+import { notify, encodeQuery } from "../services/utils"
 
 export default class extends Component {
     data = React.createRef()
 
-    componentWillUnmount() {
-        this.scope.off()
-    }
-
     getReferralCode = async () => {
-        if (typeof window !== 'undefined') {
+        if (typeof window !== "undefined") {
             let { sea, user } = window
-            const message = 'getReferralCode'
+            const message = "getReferralCode"
             const signature = await sea.sign(message, user._.sea)
             const data = {
                 signature,
@@ -29,7 +25,7 @@ export default class extends Component {
     }
 
     callback = scope => {
-        if (typeof window !== 'undefined') {
+        if (typeof window !== "undefined") {
             scope.map().once((data, key) => {
                 if (data)
                     this.data.current.loadData({
@@ -57,7 +53,7 @@ export default class extends Component {
                         </button>
                     </div>
                 </div>
-                {typeof window !== 'undefined' &&
+                {typeof window !== "undefined" &&
                 window.user &&
                 window.user.is ? (
                     <>
@@ -67,7 +63,7 @@ export default class extends Component {
                             path={`~${config.system.pub}/user/${window.user.is.pub}/referralCode`}
                             callback={this.callback}
                             render={item => {
-                                if (typeof window !== 'undefined') {
+                                if (typeof window !== "undefined") {
                                     const referralLink = `${window.location.origin}/?ref=${item.data.referralCode}`
 
                                     return (
@@ -91,7 +87,7 @@ export default class extends Component {
                                                         onClick={() => {
                                                             notify(
                                                                 `${common.referralCode} ${common.copied}`,
-                                                                'is-success'
+                                                                "is-success"
                                                             )
                                                         }}
                                                         className="button is-primary"

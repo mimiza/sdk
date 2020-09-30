@@ -74,13 +74,13 @@ var _default = /*#__PURE__*/function (_Component) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              if (!(typeof window !== 'undefined')) {
+              if (!(typeof window !== "undefined")) {
                 _context.next = 10;
                 break;
               }
 
               _window = window, sea = _window.sea, user = _window.user;
-              message = 'getReferralCode';
+              message = "getReferralCode";
               _context.next = 5;
               return sea.sign(message, user._.sea);
 
@@ -105,7 +105,7 @@ var _default = /*#__PURE__*/function (_Component) {
     })));
 
     _defineProperty(_assertThisInitialized(_this), "callback", function (scope) {
-      if (typeof window !== 'undefined') {
+      if (typeof window !== "undefined") {
         scope.map().once(function (data, key) {
           if (data) _this.data.current.loadData({
             data: {
@@ -121,11 +121,6 @@ var _default = /*#__PURE__*/function (_Component) {
   }
 
   _createClass(_default, [{
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.scope.off();
-    }
-  }, {
     key: "render",
     value: function render() {
       var pageContext = this.props.pageContext;
@@ -138,13 +133,13 @@ var _default = /*#__PURE__*/function (_Component) {
         type: "button",
         className: "button is-primary",
         onClick: this.getReferralCode
-      }, common.getReferralCode))), typeof window !== 'undefined' && window.user && window.user.is ? /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_Data["default"], {
+      }, common.getReferralCode))), typeof window !== "undefined" && window.user && window.user.is ? /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_Data["default"], {
         pageContext: pageContext,
         namespace: "gun",
         path: "~".concat(_config["default"].system.pub, "/user/").concat(window.user.is.pub, "/referralCode"),
         callback: this.callback,
         render: function render(item) {
-          if (typeof window !== 'undefined') {
+          if (typeof window !== "undefined") {
             var referralLink = "".concat(window.location.origin, "/?ref=").concat(item.data.referralCode);
             return /*#__PURE__*/_react["default"].createElement("div", {
               className: "field has-addons"
@@ -165,7 +160,7 @@ var _default = /*#__PURE__*/function (_Component) {
               text: referralLink
             }, /*#__PURE__*/_react["default"].createElement("button", {
               onClick: function onClick() {
-                (0, _utils.notify)("".concat(common.referralCode, " ").concat(common.copied), 'is-success');
+                (0, _utils.notify)("".concat(common.referralCode, " ").concat(common.copied), "is-success");
               },
               className: "button is-primary"
             }, /*#__PURE__*/_react["default"].createElement("span", {
